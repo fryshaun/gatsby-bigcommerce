@@ -1,0 +1,27 @@
+query MyQuery {
+  allBigCommerceProducts {
+    nodes {
+      name
+      bigcommerce_id
+      categories
+      options {
+        display_name
+        option_values {
+          label
+          id
+        }
+      }
+    }
+  }
+  allCheckfrontItems(filter: {product_group_type: {eq: "P"}}) {
+    nodes {
+      name
+      item_id
+      category_id
+      product_group_children {
+        name
+        item_id
+      }
+    }
+  }
+}

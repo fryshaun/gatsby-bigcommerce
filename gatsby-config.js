@@ -84,6 +84,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-checkfront`,
+      options: {
+        host: process.env.GATSBY_CF_HOST,
+        authorization: process.env.GATSBY_CF_BASIC_AUTH,
+      }
+    },
+    {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
