@@ -74,20 +74,7 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
-                
-                <section className="section">
-                  <div className="container has-text-centered">
-                    <div className="block">
-                      <img src={bigimage.image.publicURL} alt={bigimage.alt} />
-                    </div>
-                    
-                    <PhotoGrid gridItems={intro.blurbs} />
-                    
-                    <h4 className="title is-spaced is-4">{intro.heading}</h4>
-                    <p className="subtitle">{intro.description}</p>
-                  </div>
-                </section>
-                
+
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
@@ -95,14 +82,16 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <BlogItem post={post} columnWidth="is-12" />
+
+                <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link> 
+                    <Link className="btn" to="/rentals">
+                      See all rentals
+                    </Link>
                   </div>
                 </div>
+
+                
               </div>
             </div>
           </div>

@@ -31,6 +31,13 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
+      allCheckfrontItems(filter: {product_group_type: {eq: "P"}}) {
+        nodes {
+          id
+          name
+          sku
+        }
+      }
     }
   `);
 
@@ -41,11 +48,22 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const posts = result.data.allMarkdownRemark.edges;
   const products = result.data.allBigCommerceProducts.nodes;
+  const rentalitems = result.data.allCheckfrontItems.nodes;
 
   products.forEach(({ custom_url, id }) => {
     createPage({
       path: `/products${custom_url.url}`,
       component: path.resolve(`src/templates/product-details.js`),
+      context: {
+        productId: id
+      }
+    });
+  });
+
+  rentalitems.forEach(({ sku, id }) => {
+    createPage({
+      path: `/rentals/${sku}`,
+      component: path.resolve(`src/templates/checkfront-details.js`),
       context: {
         productId: id
       }
