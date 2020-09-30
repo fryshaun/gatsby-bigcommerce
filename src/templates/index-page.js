@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import PhotoGrid from '../components/PhotoGrid';
-import BlogItem from '../components/BlogItem';
+//import PhotoGrid from '../components/PhotoGrid';
+//import BlogItem from '../components/BlogItem';
 
 export const IndexPageTemplate = ({
   image,
@@ -91,7 +91,7 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>
 
-                
+
               </div>
             </div>
           </div>

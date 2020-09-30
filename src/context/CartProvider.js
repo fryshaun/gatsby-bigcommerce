@@ -7,7 +7,7 @@ const initialState = {
   cartError: false,
   cart: {
     currency: {
-      code: 'USD'
+      code: 'CAD'
     },
     cartAmount: 0,
     lineItems: {},

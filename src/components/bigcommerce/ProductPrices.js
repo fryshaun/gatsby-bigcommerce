@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import CurrencyFormatter from './CurrencyFormatter';
 import PriceContext from '../../context/PriceProvider';
 
-const currencyCode = 'USD'; // TODO: Move this to use settings merchant sets up in BigCommerce (v2 Currencies API)
+const currencyCode = 'CAD'; // TODO: Move this to use settings merchant sets up in BigCommerce (v2 Currencies API)
 
 const ProductPrices = ({ product }) => {
   const prices = useContext(PriceContext);
